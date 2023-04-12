@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>Vue project</title>
+</head>
+<body>
+
+    <div class="container pt-5" id="app">
+        <div class="card center">
+            <h1>{{title}}: {{ counter }}</h1>
+            <div class="btn primary" v-on:click="counter++">+</div>
+            <div class="btn danger" v-on:click="counter = counter-1">-</div>
+        </div>
+    </div>
+
+    <div class="container" id="input">
+        <div class="card">
+            <h1 :style="{
+                color: inputValue.length > 5 ?  'green' : ''
+            }">{{inputTitle}}:</h1>
+            <div class="form-control">
+                <input type="text" 
+                    v-bind:placeholder= "placeholder" 
+                    v-bind:value="inputValue"
+                    v-on:input="SaveInput"
+                v-on:keypress.enter="addNewNote">
+            </div>
+            <button class="btn" v-on:click="addNewNote">Добавить</button>
+            <hr>
+            <ul class="list" v-if="notes.length !== 0">
+                <li>
+                    <strong>Всего заметок: ({{notes.length}})</strong>
+                </li>
+                <hr>
+
+                <li class="list-item" v-for="(myNote, index) in notes">
+                    &#128276;  {{myNote}} 
+                    <button class="btn danger" v-on:click="removeNote(index)">Удалить</button>
+                </li>
+            </ul>
+            <div v-else>{{noNotes}}</div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
