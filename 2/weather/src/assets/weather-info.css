@@ -1,26 +1,3 @@
-<script>
-export default{
-    data(){
-        return{
-            city: ''
-        }
-    }
-}
-</script>
-
-<template>
-    <div class="wrapper">
-        <h1>Погодное приложение</h1>
-        <p>Узнать погоду в {{ city == '' ? 'вашем городе' : city }}</p>
-        <input type="text" v-model="city" placeholder="Введите город" >
-        <!-- <button v-show="city !== ''">Узнать погоду</button> -->
-        <button v-if="city !== ''">Узнать погоду</button>
-        <button disabled v-else>Введите город</button>
-
-    </div>
-</template>
-
-<style scoped>
 .wrapper{
     width: 900px;
     height: 500px;
@@ -75,4 +52,11 @@ export default{
     color: white;
 }
 
-</style>
+.error{
+    color:#d1d759;
+}
+
+.information{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}

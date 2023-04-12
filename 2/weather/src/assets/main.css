@@ -1,0 +1,20 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(194,193,198);
+  background: linear-gradient(156deg, rgba(194,193,198,1) 0%, rgba(219,158,52,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'DynaPuff', cursive;
+}
+
+--root{
+  --mainColor: rgb(161, 73, 73);
+  --buttonColor: #d1d759;
+}
