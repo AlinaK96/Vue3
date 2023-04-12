@@ -11,4 +11,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'DynaPuff', cursive;
+}
+
+--root{
+    --mainColor: rgb(161, 73, 73);
+    --buttonColor: #d1d759;
 }

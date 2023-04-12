@@ -1,11 +1,78 @@
 <script>
-
+export default{
+    data(){
+        return{
+            city: ''
+        }
+    }
+}
 </script>
 
 <template>
+    <div class="wrapper">
+        <h1>Погодное приложение</h1>
+        <p>Узнать погоду в {{ city == '' ? 'вашем городе' : city }}</p>
+        <input type="text" v-model="city" placeholder="Введите город" >
+        <!-- <button v-show="city !== ''">Узнать погоду</button> -->
+        <button v-if="city !== ''">Узнать погоду</button>
+        <button disabled v-else>Введите город</button>
 
+    </div>
 </template>
 
 <style scoped>
+.wrapper{
+    width: 900px;
+    height: 500px;
+    border-radius: 50px;
+    padding: 20px;
+    background-color: rgb(161, 73, 73);
+    text-align: center;
+    color: white;
+}
+
+.wrapper h1{
+    margin-top: 50px;
+}
+
+.wrapper p{
+    margin-top: 20px;
+}
+
+.wrapper input{
+    margin-top: 30px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid black;
+    color: white;
+    font-size: 14px;
+    padding: 5px 8px;
+    outline: none; 
+}
+
+.wrapper input:focus{
+    border-bottom-color:#d1d759;
+}
+
+.wrapper button{
+    background-color: #d1d759;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 10px 15px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: transform 500ms ease;
+}
+
+.wrapper button:hover{
+    transform: scale(1.1) translateY(-5px);
+}
+
+.wrapper button:disabled{
+    cursor: not-allowed;
+    background-color: rgb(161, 73, 73);
+    color: white;
+}
 
 </style>
