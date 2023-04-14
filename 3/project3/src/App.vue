@@ -21,7 +21,7 @@ export default {
     deliteListItem(id){
       this.ToDo = this.ToDo.filter(t => t.id != id)
     },
-    addTodo(todo){
+    add(todo){
       this.ToDo.push(todo)
     }
   }
@@ -32,7 +32,7 @@ export default {
  <div id="app">
   <h1>To do list: </h1>
   <addComponent 
-    @add-todo="addTodo"
+    @add-todo="add"
   />
   <hr>
   <todoList v-bind:list="ToDo"

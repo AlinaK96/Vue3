@@ -16,14 +16,14 @@ export default{
     },
     methods:{
         onSubmit(){
-            if (this.title.trim()){
+            if (this.title.trim() != ''){
                 const newToDo = {
                     id:Date.now(),
                     title: this.title,
                 }
             }
 
-            this.$emit('add-todo', addTodo)
+            this.$emit('add-todo', newToDo)
         }
     }
 }
