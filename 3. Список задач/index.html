@@ -11,45 +11,47 @@
     <title>Список задач</title>
 </head>
 <body>
-    <div class="header">
-        <div class="container">
-            <div class="logo">Список задач:</div>
-            <div class="form">
-                <input type="text">
-                <button class="btn">добавить</button>
+    <div id="app">
+        <div class="header">
+            <div class="container">
+                <div class="logo">Список задач:</div>
+                <div class="form">
+                    <input type="text" v-bind:placeholder="placeholder" v-bind:value="valueInput" v-on:input="newInput" v-on:keypress.enter="addTask">
+                    <button class="btn" v-on:click="addTask">добавить</button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <h2>
-            <span>Список дел: </span>
-            <span class="mask-num">10</span>
-        </h2>
-        <ul class="mask-list">
-            <li>
-                <div>
-                    <input type="checkbox">
-                    <span>New books</span>
-                    <button class="btn-remove">удалить</button>
-                </div>
-            </li>
-        </ul>
+        <div class="container">
+            <h2>
+                <span>Список задач: </span>
+                <span class="mask-num">{{tasks.length}}</span>
+            </h2>
+            <ul class="mask-list">
+                <li v-for="(task, index) in tasks":key = task.id>
+                    <div class="inside">
+                        <input type="checkbox" v-on:change="doCheck (index, 'need')">
+                        <span>{{task.title}}</span>
+                        <button class="btn-remove" v-on:click="removeTask(index, 'need')">удалить</button>
+                    </div>
+                </li>
+            </ul>
 
-        <h2>
-            <span>Архив задач: </span>
-            <span class="mask-num">10</span>
-        </h2>
-        <ul class="mask-list complete-list">
-            <li>
-                <div>
-                    <input type="checkbox" checked>
-                    <span>Bananas</span>
-                    <button class="btn-remove">удалить</button>
-                </div>
-            </li>
-        </ul>
-       
+            <h2>
+                <span>Архив задач: </span>
+                <span class="mask-num">{{deletedTasks.length}}</span>
+            </h2>
+            <ul class="mask-list complete-list">
+                <li v-for="(task, index) in deletedTasks" :key = task.id>
+                    <div class="inside">
+                        <input type="checkbox" v-on:change="doCheck (index, 'complete')" checked>
+                        <span>{{task.title}}</span>
+                        <button class="btn-remove" v-on:click="removeTask(index, 'complete')">удалить</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

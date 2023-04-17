@@ -2,6 +2,7 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
+    background-image: url(https://enter-media.org/upload/iblock/39a/39a49db747ccc18a2fde90dc7849c4e3.jpg);
 }
 
   
@@ -42,7 +43,7 @@ h2 .mask-num {
 }
   
 .header .container .logo {
-    width: 100px;
+    width: 170px;
     line-height: 50px;
     color: #ddd;
     font-size: 24px;
@@ -82,6 +83,7 @@ h2 .mask-num {
     height: 40px;
     outline: none;
     transition: 0.2s;
+    cursor: pointer;
 }
   
 .btn:hover {
@@ -90,19 +92,20 @@ h2 .mask-num {
 }
   
 .mask-list li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 32px;
     line-height: 32px;
     margin-bottom: 10px;
     border-radius: 3px;
-    background-color: #fff;
+    background-color: transparent;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 500;
 }
   
 .mask-list.complete-list li {
     border-left-color: #999;
-    opacity: .5;
+    opacity: .7;
+    list-style-type: none;
 }
 .mask-list {
       padding-left: 0;
@@ -124,6 +127,7 @@ input[type="checkbox"] + span {
       font-size: 12px;
       outline: none;
       transition: 0.2s;
+      cursor: pointer;
 }
   
 .btn-remove:hover {
@@ -190,4 +194,10 @@ input[type="checkbox"]:not(:checked) + span::after{
      left: 4px;
      top: calc(50% - 6px);
      background-color: #7d25a9;
+}
+
+.inside{
+    display: flex;
+    display: flex;
+    justify-content: space-between;
 }
