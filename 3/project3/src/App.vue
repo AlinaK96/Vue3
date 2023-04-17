@@ -21,8 +21,8 @@ export default {
     deliteListItem(id){
       this.ToDo = this.ToDo.filter(t => t.id != id)
     },
-    add(todo){
-      this.ToDo.push(todo)
+    add(newToDo){
+      this.ToDo.push(newToDo)
     }
   }
 }

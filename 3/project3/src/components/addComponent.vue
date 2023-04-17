@@ -17,7 +17,7 @@ export default{
     methods:{
         onSubmit(){
             if (this.title.trim() != ''){
-                const newToDo = {
+                let newToDo = {
                     id:Date.now(),
                     title: this.title,
                 }

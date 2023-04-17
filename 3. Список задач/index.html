@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Список задач</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">Список задач:</div>
+            <div class="form">
+                <input type="text">
+                <button class="btn">добавить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>
+            <span>Список дел: </span>
+            <span class="mask-num">10</span>
+        </h2>
+        <ul class="mask-list">
+            <li>
+                <div>
+                    <input type="checkbox">
+                    <span>New books</span>
+                    <button class="btn-remove">удалить</button>
+                </div>
+            </li>
+        </ul>
+
+        <h2>
+            <span>Архив задач: </span>
+            <span class="mask-num">10</span>
+        </h2>
+        <ul class="mask-list complete-list">
+            <li>
+                <div>
+                    <input type="checkbox" checked>
+                    <span>Bananas</span>
+                    <button class="btn-remove">удалить</button>
+                </div>
+            </li>
+        </ul>
+       
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
