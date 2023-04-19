@@ -1,6 +1,6 @@
 
 
-const appPractice = Vue.createApp({
+const app = Vue.createApp({
     data(){
         return {
             title: 'Hello world',
@@ -35,26 +35,24 @@ const appPractice = Vue.createApp({
             return this.message.toUpperCase()
         }
     }
-}).mount('#app')
+})
 
 
 
-// Определяем новый глобальный компонент с именем button-counter
-appPractice.component('button-counter', {
+app.component('button-counter', {
   data() {
     return {
       count: 0
     }
   },
   template: `
-    <button @click="count++">
-      Счётчик кликов — {{ count }}
-    </button>`
+  <div id="components-demo">
+      <button @click="count++">Счётчик кликов — {{ count }}</button>
+  </div>`
 })
 
-appPractice.mount('#components-demo')
 
-appPractice.component('carsList', {
+app.component('carsList', {
   data() {
     return {
       carsList: [
@@ -66,6 +64,12 @@ appPractice.component('carsList', {
     }
   },
   template: `
-    <div><div class='car' v-for="car in carsList"><p>{{car.model}}</p></div></div>
+    <div>
+      <div class='car' v-for="car in carsList">
+        <p>{{car.model}}</p>
+      </div>
+    </div>
   `
 })
+
+app.mount('#app')
