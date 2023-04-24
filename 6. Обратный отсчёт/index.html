@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./timer.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Поспешите</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="timeLeft">
+            <div id="timer" class="timer">
+                <Timer 
+                    starttime="Dec 31, 2023 23:55:25" 
+                    endtime="Jan 1, 2024 00:00:00" 
+                    trans='{  
+                            "day":"Дней",
+                            "hours":"Часов",
+                            "minutes":"Минут",
+                            "seconds":"Секунд",
+                            "expired":"Событие уже прошло",
+                            "running":"До конца события",
+
+                            "status": 
+                                {
+                                "expired":"Событие окончено",
+                                "running":"Поспешите!",
+                                "upcoming":"Событие скоро начнётся"
+                                }
+                            }'>
+                </Timer>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script> 
+    <script src="app.js"></script>
+</body>
+</html>
