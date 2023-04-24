@@ -22,6 +22,7 @@ GitHub pages: https://alinak96.github.io/To-do-list---Vue3/ <br>
 ![Вид:](./results/calculator.png)
 
 6. Приложение обратного отсчёта времени с тремя видами всплывающих сообщений <br>
+Посмотреть проект: https://codepen.io/AlinaK96/pen/PoyppwZ <br>
 ![Вид:](./results/timer1.png)
 ![Вид:](./results/timer2.png)
 ![Вид:](./results/timer3.png)
