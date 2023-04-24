@@ -15,7 +15,7 @@
 GitHub pages: https://alinak96.github.io/To-do-list---Vue3/
 
 4. Калькулятор
-![Вид:](./4.%20%D0%9A%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80/calculator/public/calculator.png)
+![Вид:](./results/calculator.png)
 
 Репозиторий проекта: https://github.com/AlinaK96/Calculator---Vue3
 
