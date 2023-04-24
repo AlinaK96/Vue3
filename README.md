@@ -12,12 +12,13 @@
 3. Заполнение и удаление списка дел <br>
 Репозиторий проекта: https://github.com/AlinaK96/To-do-list---Vue3 <br>
 GitHub pages: https://alinak96.github.io/To-do-list---Vue3/ <br>
-![Вид:](./results/todolist-overview.png)
+
+![Вид:](./results/weather.png)
 
 <br>
 4. Калькулятор <br>
 Репозиторий проекта: https://github.com/AlinaK96/Calculator---Vue3 <br>
-![Вид:](./results/calculator.png)
 
+![Вид:](./results/weather.png)
 
 
